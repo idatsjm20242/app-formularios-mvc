@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/bootstrap/bootstrap.css}"
+          rel="stylesheet">
+</head>
+<body>
+<div class="card">
+    <div class="card-header">
+        PROMEDIO DE NOTAS
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control"
+                       id="txtnota1" placeholder="name@example.com">
+                <label for="txtnota1">Evaluación Continua 1</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control"
+                       id="txtnota2" placeholder="name@example.com">
+                <label for="txtnota2">Evaluación Continua 2</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control"
+                       id="txtnota3" placeholder="name@example.com">
+                <label for="txtnota3">Evaluación Continua 3</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control"
+                       id="txtnota4" placeholder="name@example.com">
+                <label for="txtnota4">Evaluación Final</label>
+            </div>
+            <button type="submit" class="btn btn-dark">CALCULAR</button>
+            <hr />
+            <div class="alert alert-primary" role="alert">
+                A simple primary alert—check it out!
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
