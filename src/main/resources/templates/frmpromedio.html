@@ -12,25 +12,32 @@
         PROMEDIO DE NOTAS
     </div>
     <div class="card-body">
-        <form>
+        <form method="post" th:action="@{/promedio}"
+            th:object="${objpromedio}">
             <div class="form-floating mb-3">
                 <input type="text" class="form-control"
-                       id="txtnota1" placeholder="name@example.com">
+                       id="txtnota1"
+                       th:field="*{ec1}"
+                       placeholder="name@example.com">
                 <label for="txtnota1">Evaluación Continua 1</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="text" class="form-control"
-                       id="txtnota2" placeholder="name@example.com">
+                       id="txtnota2"
+                       th:field="*{ec2}" placeholder="name@example.com">
                 <label for="txtnota2">Evaluación Continua 2</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="text" class="form-control"
-                       id="txtnota3" placeholder="name@example.com">
+                       id="txtnota3"
+                       th:field="*{ec3}"
+                       placeholder="name@example.com">
                 <label for="txtnota3">Evaluación Continua 3</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="text" class="form-control"
-                       id="txtnota4" placeholder="name@example.com">
+                       id="txtnota4"
+                       th:field="*{ef}" placeholder="name@example.com">
                 <label for="txtnota4">Evaluación Final</label>
             </div>
             <button type="submit" class="btn btn-dark">CALCULAR</button>
