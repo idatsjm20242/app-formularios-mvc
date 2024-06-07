@@ -33,6 +33,25 @@
             <div th:if="${mostrar}" class="alert alert-primary" role="alert">
                 <span th:text="${resultado} ?: ''"></span>
             </div>
+
+            <hr />
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Nro Paciente</th>
+                    <th scope="col">IMC</th>
+                    <th scope="col">Diagnóstico</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="paciente :${listapacientes}">
+                    <td th:text="${paciente.nropaciente}"></td>
+                    <td th:text="${paciente.valorimc}"></td>
+                    <td th:text="${paciente.diagnostico}"></td>
+                </tr>
+                </tbody>
+            </table>
         </form>
     </div>
 </div>
