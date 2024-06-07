@@ -19,7 +19,29 @@ public class ImcController {
     }
 
     @PostMapping("/imc")
-    public String calcularImc(){
+    public String calcularImc(ImcModel imcModel,
+                              Model model){
+        Double tallam = imcModel.getTalla() / 100;
+        Double valorImc = imcModel.getPeso() / (tallam * tallam);
+        String diagnostico = "";
+        if(valorImc <= 16){
+            diagnostico = "por debajo del peso";
+        }else if(valorImc <= 19){
+            diagnostico = "con peso normal";
+        }else if(valorImc <= 24){
+            diagnostico = "con obesidad leve";
+        }else if(valorImc <= 29){
+            diagnostico = "con obesidad media";
+        }else {
+            diagnostico = "con obesidad mórbida";
+        }
+        model.addAttribute("mostrar",
+                true);
+        model.addAttribute("resultado",
+                "Su Valor IMC es: " + valorImc +
+                " usted se encuentra: " + diagnostico);
+        model.addAttribute("objimc",
+                new ImcModel());
         return "frmimc";
     }
 
